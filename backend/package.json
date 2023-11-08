@@ -1,0 +1,22 @@
+{
+  "name": "thepetbook",
+  "version": "1.0.0",
+  "description": "THE PETBOOK BY THE TNGs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blairphillips1/thepetbook.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blairphillips1/thepetbook/issues"
+  },
+  "homepage": "https://github.com/blairphillips1/thepetbook#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
