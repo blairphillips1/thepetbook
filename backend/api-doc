@@ -74,9 +74,8 @@ components:
           type: integer
           example: 1
         image/*:
-          schema:
-            type: string
-            format: binary
+          type: string
+          format: binary
     likeSuccess:
       type: object
       properties:
@@ -85,7 +84,7 @@ components:
           example: 1
         noOfLikes:
           type: integer
-          exmaple: 2
+          example: 2
     postLikes:
       type: object
       properties:
@@ -101,27 +100,27 @@ components:
         badRequest:
           type: string
           example: Bad Request
-          status:
-            type: number
-            default: 400
+        status:
+          type: number
+          default: 400
     notFound:
       type: object
       properties:
         notFound:
           type: string
           example: Not found
-          status:
-            type: number
-            default: 404
+        status:
+          type: number
+          default: 404
     internalServerError:
       type: object
       properties:
         notFound:
           type: string
           example: Internal Server Error
-          status:
-            type: number
-            default: 500
+        status:
+          type: number
+          default: 500
   responses:
     success:
       description: Successful response 
