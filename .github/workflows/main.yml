@@ -24,14 +24,14 @@ jobs:
         run: cd frontend/thepetbook-ui/ && npm i
 
       - name: Install playwright browsers
-        run: npx playwright install --with-deps
+        run: cd frontend/thepetbook-ui/ && npx playwright install --with-deps
 
       # -----
       # 👉 Insert the steps required to take screenshots
       # -----
 
       - name: Run tests
-        run: npm run test:e2e
+        run: cd frontend/thepetbook-ui/ && npm run test:e2e
 
       - name: Upload screenshots to argos-ci.com
         continue-on-error: true
