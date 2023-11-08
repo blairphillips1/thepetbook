@@ -1,6 +1,6 @@
 import { Grid, Card, Image, Text, Button } from '@mantine/core';
 import { AiFillLike } from 'react-icons/ai';
-
+import React from 'react';
 
 interface PetCardProps {
   image: string;
@@ -21,7 +21,7 @@ function PetCard({ image, numberOfLikes }: PetCardProps) {
           </Text>
 
           <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-          <AiFillLike /> Like
+            <AiFillLike /> Like
           </Button>
         </Card>
       </Grid.Col>

@@ -3,6 +3,7 @@ import './App.css';
 import { getLike } from './services/pet-api';
 import { Grid, Card, Image, Text, Button, Title } from '@mantine/core';
 import PetCard from './components/PetCard';
+import React from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
