@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <Title ta="center" order={1}>
-        The Petbook
+        The Petbooks
       </Title>
       <Grid>
         {pets.map(({ image, numberOfLikes }) => (
