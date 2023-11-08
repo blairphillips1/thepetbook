@@ -1,7 +1,7 @@
 ---
 openapi: 3.0.3
 info:
-  description: "TNG Petbook API"
+  description: "TNG Petbook"
   version: "1.0.0"
   title: "TNG Petbook"
 servers:
