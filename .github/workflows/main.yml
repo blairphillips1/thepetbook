@@ -17,14 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: current
-      - name: CD
-        run: cd frontend/thepetbook-ui/
-      - name: Install dependencies
-        run: npm i
-      - name: Install playwright browsers
-        run: npx playwright install --with-deps
-      - name: Run tests
-        run: npx playwright test
+      - name: Do everything
+        run: cd frontend/thepetbook-ui/ && npm i && npx playwright install --with-deps && npx playwright test
       - name: Upload screenshots to argos-ci.com
         continue-on-error: true
         # 👇 change "./screenshots" by your screenshots folder path
