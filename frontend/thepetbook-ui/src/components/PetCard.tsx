@@ -3,9 +3,9 @@ import { AiFillLike } from 'react-icons/ai';
 import React from 'react';
 
 interface PetCardProps {
-  image: string;
-  numberOfLikes: number;
-  key: string;
+  readonly image: string;
+  readonly numberOfLikes: number;
+  readonly key: string;
 }
 
 function PetCard({ image, numberOfLikes, key}: PetCardProps) {
