@@ -15,11 +15,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: current
+      - name: install
+        run: cd backend/ && npm install
       - name: Run Stryker
-        run: cd backend/ && stryker run
+        run: cd backend/ && npx stryker run
       - name: Upload Styrker Report to Sonar Cube
         run: cd reports/mutation/ && jq -f mutation-report-to-sonar.jq mutation.json > mutation-sonar.json
   sonarcloud:
+    needs: stryker
     name: SonarCloud
     runs-on: ubuntu-latest
     steps:
