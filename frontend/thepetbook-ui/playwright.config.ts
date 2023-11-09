@@ -38,8 +38,7 @@ export default defineConfig({
   },
 
   // Add Argos reporter only when it runs on CI
-  // reporter: process.env.CI
-  //   ? [...defaultReporters, ['@argos-ci/playwright/reporter']]
-  //   : defaultReporters,
-  reporter: defaultReporters,
+  reporter: process.env.CI
+    ? [...defaultReporters, ['@argos-ci/playwright/reporter']] // whe might need to install this?
+    : defaultReporters,
 });
