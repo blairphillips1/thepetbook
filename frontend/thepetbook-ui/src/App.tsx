@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import { getLike } from './services/pet-api';
 import { Grid, Card, Image, Text, Button, Title } from '@mantine/core';
 import PetCard from './components/PetCard';
@@ -51,7 +50,7 @@ function App() {
       </Title>
       <Grid>
         {pets.map(({ image, numberOfLikes }) => (
-          <PetCard image={image} numberOfLikes={numberOfLikes} />
+          <PetCard key={image}image={image} numberOfLikes={numberOfLikes} />
         ))}
       </Grid>
     </>

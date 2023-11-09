@@ -3,13 +3,14 @@ import { AiFillLike } from 'react-icons/ai';
 import React from 'react';
 
 interface PetCardProps {
-  image: string;
-  numberOfLikes: number;
+  readonly image: string;
+  readonly numberOfLikes: number;
+  readonly key: string;
 }
 
-function PetCard({ image, numberOfLikes }: PetCardProps) {
+function PetCard({ image, numberOfLikes, key}: PetCardProps) {
   return (
-    <>
+    <React.Fragment key={key}>
       <Grid.Col span={4}>
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Card.Section>
@@ -25,7 +26,7 @@ function PetCard({ image, numberOfLikes }: PetCardProps) {
           </Button>
         </Card>
       </Grid.Col>
-    </>
+    </React.Fragment>
   );
 }
 
