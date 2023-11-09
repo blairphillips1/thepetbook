@@ -1,56 +1,74 @@
-import { useState, useEffect } from 'react';
-import { getLike } from './services/pet-api';
-import { Grid, Card, Image, Text, Button, Title } from '@mantine/core';
+import { Grid, Title } from '@mantine/core';
 import PetCard from './components/PetCard';
-import React from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [likes, setLikes] = useState<string>('');
   const pets = [
     {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 10,
+      image: '../public/pet1.jpg',
+      numberOfLikes: 0,
     },
     {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 5,
+      image: '../public/pet2.png',
+      numberOfLikes: 0,
     },
     {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 2,
+      image: '../public/pet3.png',
+      numberOfLikes: 0,
     },
     {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 10,
+      image: '../public/pet4.png',
+      numberOfLikes: 0,
     },
     {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 5,
+      image: '../public/pet5.png',
+      numberOfLikes: 0,
     },
     {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 2,
+      image: '../public/pet6.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet7.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet8.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet9.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet10.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet11.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet12.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet13.png',
+      numberOfLikes: 0,
+    },
+    {
+      image: '../public/pet14.png',
+      numberOfLikes: 0,
     },
   ];
 
-  useEffect(() => {
-    // async function getLikes() {
-    //   const response = await getLike();
-    //   console.log(response);
-    //   setLikes(response);
-    // }
-    // getLikes();
-  }, []);
-
   return (
     <>
-      <Title ta="center" order={1}>
+      <Title className="titleClass" ta="center" order={1}>
         The Petbook
       </Title>
       <Grid>
         {pets.map(({ image, numberOfLikes }) => (
-          <PetCard key={image}image={image} numberOfLikes={numberOfLikes} />
+          <PetCard key={image} image={image} numberOfLikes={numberOfLikes} />
         ))}
       </Grid>
     </>
