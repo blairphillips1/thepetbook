@@ -68,23 +68,27 @@ components:
       required: true
   schemas:
     petPictures:
-      type: object
-      properties:
-        photoNumber:
-          type: integer
-          example: 1
-        image/*:
-          type: string
-          format: binary
+      type: array
+      items:
+        type: object
+        properties:
+          photoNumber:
+            type: integer
+            example: 1
+          image/*:
+            type: string
+            format: binary
     likeSuccess:
-      type: object
-      properties:
-        photoNumber:
-          type: integer
-          example: 1
-        noOfLikes:
-          type: integer
-          example: 2
+      type: array
+      items:
+        type: object
+        properties:
+          photoNumber:
+            type: integer
+            example: 1
+          noOfLikes:
+            type: integer
+            example: 2
     postLikes:
       type: object
       properties:
