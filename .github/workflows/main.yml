@@ -26,4 +26,4 @@ jobs:
       - name: Upload screenshots to argos-ci.com
         continue-on-error: true
         # 👇 change "./screenshots" by your screenshots folder path
-        run: npm exec argos upload frontend/thepetbook-ui/screenshots
+        run: cd frontend/thepetbook-ui/ && npm exec argos upload ./screenshots
