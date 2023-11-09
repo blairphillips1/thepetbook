@@ -19,6 +19,7 @@
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
+    "@argos-ci/cli": "^1.0.2",
     "@argos-ci/playwright": "^1.2.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",

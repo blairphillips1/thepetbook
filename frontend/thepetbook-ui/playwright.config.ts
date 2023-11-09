@@ -32,13 +32,13 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'pnpm run dev',
+    command: 'npm run dev',
     url: 'http://localhost:3000',
     // reuseExistingServer: !process.env.CI,
   },
 
   // Add Argos reporter only when it runs on CI
   reporter: process.env.CI
-    ? [...defaultReporters, ['@argos-ci/playwright/reporter']]
+    ? [...defaultReporters, ['@argos-ci/playwright/reporter']] // whe might need to install this?
     : defaultReporters,
 });
