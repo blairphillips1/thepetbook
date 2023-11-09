@@ -115,7 +115,7 @@ components:
     internalServerError:
       type: object
       properties:
-        notFound:
+        internalServerError:
           type: string
           example: Internal Server Error
         status:
