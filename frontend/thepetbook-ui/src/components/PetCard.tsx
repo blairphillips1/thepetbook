@@ -5,12 +5,12 @@ import React from 'react';
 interface PetCardProps {
   image: string;
   numberOfLikes: number;
-  key : string;
+  key: string;
 }
 
-function PetCard({ image, numberOfLikes }: PetCardProps) {
+function PetCard({ image, numberOfLikes, key}: PetCardProps) {
   return (
-    <>
+    <div key={key}>
       <Grid.Col span={4}>
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Card.Section>
@@ -26,7 +26,7 @@ function PetCard({ image, numberOfLikes }: PetCardProps) {
           </Button>
         </Card>
       </Grid.Col>
-    </>
+    </div>
   );
 }
 
