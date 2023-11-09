@@ -6,7 +6,25 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  stryker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: current
+      - name: install npm globally
+        run: cd backend/ && npm i -g npm@latest && sudo apt-get install jq
+      - name: install
+        run: cd backend/ && npm install
+      - name: Run Stryker
+        run: cd backend/ && npx stryker run
+      - name: Upload Styrker Report to Sonar Cube
+        run: cd backend/reports/mutation/ && jq -f mutation-report-to-sonar.jq mutation.json > mutation-sonar.json
   sonarcloud:
+    needs: stryker
     name: SonarCloud
     runs-on: ubuntu-latest
     steps:
