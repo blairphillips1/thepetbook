@@ -59,6 +59,10 @@ function App() {
       image: '../public/pet14.png',
       numberOfLikes: 0,
     },
+    {
+      image: '../public/Robot.jpeg',
+      numberOfLikes: 0,
+    },
   ];
 
   return (
