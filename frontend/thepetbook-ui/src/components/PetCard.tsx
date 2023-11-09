@@ -21,7 +21,7 @@ function PetCard({ image, numberOfLikes, key }: PetCardProps) {
             Number of likes: {numberOfLikes}
           </Text>
 
-          <Button variant="light" color="blue" fullWidth mt="sm" radius="lg">
+          <Button variant="light" color="blue" fullWidth mt="md" radius="md">
             <AiFillLike /> Like
           </Button>
         </Card>
