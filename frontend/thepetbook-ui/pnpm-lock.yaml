@@ -55,9 +55,6 @@ devDependencies:
   eslint-plugin-react-refresh:
     specifier: ^0.4.3
     version: 0.4.3(eslint@8.45.0)
-  reporter:
-    specifier: link:@argos-ci/playwright/reporter
-    version: link:@argos-ci/playwright/reporter
   typescript:
     specifier: ^5.0.2
     version: 5.0.2
