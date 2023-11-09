@@ -51,7 +51,7 @@ function App() {
       </Title>
       <Grid>
         {pets.map(({ image, numberOfLikes }) => (
-          <PetCard image={image} numberOfLikes={numberOfLikes} />
+          <PetCard key={image}image={image} numberOfLikes={numberOfLikes} />
         ))}
       </Grid>
     </>

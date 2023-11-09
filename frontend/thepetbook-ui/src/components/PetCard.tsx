@@ -5,6 +5,7 @@ import React from 'react';
 interface PetCardProps {
   image: string;
   numberOfLikes: number;
+  key : string;
 }
 
 function PetCard({ image, numberOfLikes }: PetCardProps) {
