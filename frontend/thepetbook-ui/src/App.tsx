@@ -33,6 +33,18 @@ function App() {
       image: '../public/IMG_0693.jpg',
       numberOfLikes: 2,
     },
+    {
+      image: '../public/IMG_0693.jpg',
+      numberOfLikes: 45454545,
+    },
+    {
+      image: '../public/IMG_0693.jpg',
+      numberOfLikes: 45454545,
+    },
+    {
+      image: '../public/IMG_0693.jpg',
+      numberOfLikes: 4545410000000545,
+    },
   ];
 
   useEffect(() => {
