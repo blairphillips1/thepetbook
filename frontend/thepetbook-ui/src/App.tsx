@@ -46,7 +46,12 @@ function App() {
 
   return (
     <>
-      <p>The Petbook</p>
+      <Title ta="center" order={1}>
+        The Petbook
+      </Title>
+      <Title ta="center" order={1}>
+        Here is a test
+      </Title>
       <Grid>
         {pets.map(({ image, numberOfLikes }) => (
           <PetCard image={image} numberOfLikes={numberOfLikes} />
