@@ -8,7 +8,7 @@ interface PetCardProps {
   readonly key: string;
 }
 
-function PetCard({ image, numberOfLikes, key}: PetCardProps) {
+function PetCard({ image, numberOfLikes, key }: PetCardProps) {
   return (
     <React.Fragment key={key}>
       <Grid.Col span={4}>
@@ -21,7 +21,7 @@ function PetCard({ image, numberOfLikes, key}: PetCardProps) {
             Number of likes: {numberOfLikes}
           </Text>
 
-          <Button variant="light" color="blue" fullWidth mt="md" radius="md">
+          <Button variant="light" color="blue" fullWidth mt="sm" radius="lg">
             <AiFillLike /> Like
           </Button>
         </Card>
