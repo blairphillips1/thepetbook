@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "strykerUpload": "jq -f mutation-report-to-sonar.jq mutation.json > mutation-sonar.json"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,15 @@
   },
   "homepage": "https://github.com/blairphillips1/thepetbook#readme",
   "dependencies": {
+    "async": "^3.2.5",
+    "colors": "^1.4.0",
     "convert-csv-to-json": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "ts-node": "^10.9.1"
+    "jq": "^1.7.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@stryker-mutator/core": "^7.3.0",
