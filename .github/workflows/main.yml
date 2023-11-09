@@ -1,9 +1,9 @@
 name: Argos
 
 on:
-  push:
-    # Argos has to run on your reference branch to creates reference builds
-    branches: [main]
+  # push:
+  #   # Argos has to run on your reference branch to creates reference builds
+  #   branches: [main]
   pull_request:
     branches: [main]
 

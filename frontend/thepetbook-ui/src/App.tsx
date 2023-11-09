@@ -33,18 +33,6 @@ function App() {
       image: '../public/IMG_0693.jpg',
       numberOfLikes: 2,
     },
-    {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 45454545,
-    },
-    {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 45454545,
-    },
-    {
-      image: '../public/IMG_0693.jpg',
-      numberOfLikes: 4545410000000545,
-    },
   ];
 
   useEffect(() => {
@@ -58,9 +46,7 @@ function App() {
 
   return (
     <>
-      <Title ta="center" order={1}>
-        The Petbook
-      </Title>
+      <p>The Petbook</p>
       <Grid>
         {pets.map(({ image, numberOfLikes }) => (
           <PetCard image={image} numberOfLikes={numberOfLikes} />
