@@ -10,7 +10,7 @@ interface PetCardProps {
 
 function PetCard({ image, numberOfLikes, key}: PetCardProps) {
   return (
-    <div key={key}>
+    <React.Fragment key={key}>
       <Grid.Col span={4}>
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Card.Section>
@@ -26,7 +26,7 @@ function PetCard({ image, numberOfLikes, key}: PetCardProps) {
           </Button>
         </Card>
       </Grid.Col>
-    </div>
+    </React.Fragment>
   );
 }
 
